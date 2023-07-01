@@ -1,0 +1,16 @@
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\bin\Debug\netcoreapp3.1\Producer.exe
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\bin\Debug\netcoreapp3.1\Producer.deps.json
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\bin\Debug\netcoreapp3.1\Producer.runtimeconfig.json
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\bin\Debug\netcoreapp3.1\Producer.runtimeconfig.dev.json
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\bin\Debug\netcoreapp3.1\Producer.dll
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\bin\Debug\netcoreapp3.1\Producer.pdb
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\obj\Debug\netcoreapp3.1\Producer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\obj\Debug\netcoreapp3.1\Producer.AssemblyInfoInputs.cache
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\obj\Debug\netcoreapp3.1\Producer.AssemblyInfo.cs
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\obj\Debug\netcoreapp3.1\Producer.csproj.CoreCompileInputs.cache
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\obj\Debug\netcoreapp3.1\Producer.csproj.CopyComplete
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\obj\Debug\netcoreapp3.1\Producer.dll
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\obj\Debug\netcoreapp3.1\Producer.pdb
+C:\Users\viktor.chupak\Desktop\Rabbitmq\Producer\obj\Debug\netcoreapp3.1\Producer.genruntimeconfig.cache
