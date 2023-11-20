@@ -17,8 +17,19 @@ By using channels and not opening multiple connections, we can save a lot of res
 
 Exchange knows what to do with the message;
 
+==============================================================================
+
+Bindings are constrains established between queues and exchanges. On bindings, __routingKey__ parameter is used as __binding key__\
+(yes, the parameter is still named routingKey, but it is actually a binding key)\
+
+Routing key (BasicPublish) => while publishing a message to an exchange.\
+Binding key (QueueBind) => while routing the message from the exchange to a appropriate queue.
+
 Producer publishes to a specific exchange name and passes __routing key__; Based on match __routing key__ and __binding key__, a message gets to a spesific queue;\
-__Binding key__ binds queues to exchnges;
+
+![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/834b064b-b7dd-4ba6-8a0d-04725c3ec236)
+
+==============================================================================
 
 __Exchange types:__\
 https://www.rabbitmq.com/tutorials/amqp-concepts.html#:~:text=The%20default%20exchange%20is%20a,same%20as%20the%20queue%20name \
