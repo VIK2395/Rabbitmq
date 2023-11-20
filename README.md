@@ -25,7 +25,7 @@ Bindings are constrains established between queues and exchanges. On bindings, _
 Routing key (BasicPublish) => while publishing a message to an exchange.\
 Binding key (QueueBind) => while routing the message from the exchange to a appropriate queue.
 
-Producer publishes to a specific exchange name and passes __routing key__; Based on match __routing key__ and __binding key__, a message gets to a spesific queue;\
+Producer publishes to a specific exchange name and passes __routing key__; Based on match __routing key__ and __binding key__, a message gets to a spesific queue;
 
 ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/834b064b-b7dd-4ba6-8a0d-04725c3ec236)
 
