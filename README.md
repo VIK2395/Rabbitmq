@@ -26,7 +26,7 @@ RabbitMq has 4 exchange types by default;
 
 - Direct (uses routing keys to push/route messages selectively to queues which has exact same binding key);
 - Topic (uses routing key "dot" pattern as the routing keys; uses spesial pattern with charachers (* - any __one word__, # - 0 or more words) as binding keys; __checks for a match of routing key and binding key__);
-- Fanout (broadcasts/pushes all the messages it receives to all the queues it knows);
+- Fanout (broadcasts/pushes all the messages it receives to all the queues it knows; ignores routing/binding keys);
 - Headers (direct exchange on steroids; ignores the routing key attribute; x-match headers are used to route messages);
 
   ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/51cf7469-eea4-46a0-bd9e-2464cdf66e99)
