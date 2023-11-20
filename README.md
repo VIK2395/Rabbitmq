@@ -18,7 +18,7 @@ By using channels and not opening multiple connections, we can save a lot of res
 Exchange knows what to do with the message;
 
 Producer publishes to a specific exchange name and passes __routing key__; Based on match __routing key__ and __binding key__, a message gets to a spesific queue;\
-__Binding key__ binds exchnges to queues;
+__Binding key__ binds queues to exchnges;
 
 __Exchange types:__\
 https://www.rabbitmq.com/tutorials/amqp-concepts.html#:~:text=The%20default%20exchange%20is%20a,same%20as%20the%20queue%20name \
