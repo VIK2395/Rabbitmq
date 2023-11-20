@@ -32,6 +32,8 @@ RabbitMq has 4 exchange types by default;
   ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/51cf7469-eea4-46a0-bd9e-2464cdf66e99)
   
 - Default (direct exchange with no name (empty string) pre-declared by the broker; we don't have to declare this exchange explicitly. Every queue that is created is automatically bound to it with a routing key which is the same as the queue name);
+  
+  ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/ff77c011-62dc-458f-9872-b85fad962a8f)
 
 - Consistent Hashing (plugin installation needed) (kinda consumers pattern but with more options).
 
