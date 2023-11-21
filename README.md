@@ -48,7 +48,7 @@ RabbitMq has 4 exchange types by default;
   
   ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/ff77c011-62dc-458f-9872-b85fad962a8f)
 
-- Consistent Hashing (plugin installation needed) (kinda consumers pattern but with more options).
+- Consistent Hashing (plugin installation needed) (kinda competing consumers pattern but with more options).
 
   ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/a61f4305-3536-4f31-a941-606597476874)
 
