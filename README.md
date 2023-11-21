@@ -1,4 +1,4 @@
-![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/efcc3548-eae0-4906-8f5c-a3e2c5977290)
+![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/42f2eac2-7880-41a5-a74a-dd2f06d81001)
 
 1. https://www.youtube.com/playlist?list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO
 2. https://www.rabbitmq.com/getstarted.html
