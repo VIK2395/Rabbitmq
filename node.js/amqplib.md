@@ -36,6 +36,7 @@ consumerFn(msg) {
   const parsedContent = JSON.parse(text);
   ...
   channel.ack(msg, allUpTo?);
+  // or
   channel.nack(msg, allUpTo?, requeue?);
 }
 ```
