@@ -14,6 +14,7 @@ __Create exchange__
 ```javascript
 await channel.assertExchange(exchangeName, exchangeType, exchangeOptions?)
 ```
+No need to explicitly create the default exchange as it is always created by rabbitMq under the hood
 
 __Create queue__
 ```javascript
@@ -48,7 +49,7 @@ __Publish message__
 ```javascript
 channel.publish(exchangeName, routingKey, msg, publishOptions?)
 ```
-To default exchange (has the direct type)
+To default exchange (always has the direct type)
 ```javascript
 channel.sendToQueue(queueName, msg, publishOptions?)
 // or
