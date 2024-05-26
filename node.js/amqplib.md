@@ -24,6 +24,7 @@ __Bind queue__
 ```javascript
 await channel.bindQueue(queueName, exchangeName, bindingKey, args?)
 ```
+No need to do explicit bindings to the default exchange as all queues get bound to it under the hood
 
 __Create consumer__
 ```javascript
