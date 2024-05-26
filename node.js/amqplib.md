@@ -43,7 +43,17 @@ consumerFn(msg) {
 }
 ```
 
-__Publish msg__
+__Publish message__
 ```javascript
 channel.publish(exchangeName, routingKey, msg, publishOptions?)
+```
+
+__Close channel__
+```javascript
+await channel.close()
+```
+
+__Close connection__
+```javascript
+await connection.close()
 ```
