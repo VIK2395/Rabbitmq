@@ -48,9 +48,11 @@ __Publish message__
 ```javascript
 channel.publish(exchangeName, routingKey, msg, publishOptions?)
 ```
-To default exchange
+To default exchange (has the direct type)
 ```javascript
 channel.sendToQueue(queueName, msg, publishOptions?)
+// or
+channel.publish('', queueName, msg, publishOptions?)
 ```
 
 __Close channel__
