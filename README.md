@@ -1,5 +1,7 @@
 ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/42f2eac2-7880-41a5-a74a-dd2f06d81001)
 
+![Screenshot from 2024-05-23 19-40-57](https://github.com/VIK2395/Rabbitmq/assets/50545334/51da38b1-716e-4e5e-9033-c511b2b60a98)
+
 1. https://www.youtube.com/playlist?list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO
 2. https://www.rabbitmq.com/getstarted.html
 
