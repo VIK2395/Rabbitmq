@@ -1,3 +1,5 @@
+https://www.npmjs.com/package/amqplib
+
 __Create connection__
 ```javascript
 const connection = await amqplib.connect(connectionString)
