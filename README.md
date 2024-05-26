@@ -21,8 +21,7 @@ Exchange knows what to do with the message;
 
 ==============================================================================
 
-Bindings are constrains established between queues and exchanges. On bindings, __routingKey__ parameter is used as __binding key__\
-(yes, the parameter is still named routingKey, but it is actually a binding key)
+Bindings are constrains established between queues and exchanges.
 
 Routing key (BasicPublish) => while publishing a message to an exchange.\
 Binding key (QueueBind) => while routing the message from the exchange to a appropriate queue.
