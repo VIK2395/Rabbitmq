@@ -29,7 +29,7 @@ No need to do explicit bindings to the default exchange as all queues get bound 
 
 __Create consumer__
 ```javascript
-await channel.consume(queueName, consumerFn, consumerOptions?)
+const consumerTag = await channel.consume(queueName, consumerFn, consumerOptions?)
 ```
 
 ```javascript
