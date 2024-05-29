@@ -68,3 +68,13 @@ await connection.close()
 Closing a connection closes all its channels as well\
 https://www.rabbitmq.com/docs/channels
 ![Screenshot from 2024-05-26 15-29-49](https://github.com/VIK2395/Rabbitmq/assets/50545334/81ca1532-824c-4bab-ace4-0c99dd949365)
+
+__Notices__
+
+Prefetch is set on channel
+```javascript
+channel.prefetch(1)
+```
+We are not forbidden to crete multiple consumers per a channel. But is it a good practice?\
+https://www.rabbitmq.com/docs/consumer-prefetch#independent-consumers
+
