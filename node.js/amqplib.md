@@ -12,13 +12,13 @@ const channel = await connection.createChannel()
 
 __Create exchange__
 ```javascript
-await channel.assertExchange(exchangeName, exchangeType, exchangeOptions?)
+const { exchange } = await channel.assertExchange(exchangeName, exchangeType, exchangeOptions?)
 ```
 No need to explicitly create the default exchange as it is always created by rabbitMq under the hood
 
 __Create queue__
 ```javascript
-await channel.assertQueue(queueName, queueOptions?)
+const { queue, messageCount, consumerCount } = await channel.assertQueue(queueName, queueOptions?)
 ```
 
 __Bind queue__
@@ -29,7 +29,7 @@ No need to do explicit bindings to the default exchange as all queues get bound 
 
 __Create consumer__
 ```javascript
-const consumerTag = await channel.consume(queueName, consumerFn, consumerOptions?)
+const { consumerTag } = await channel.consume(queueName, consumerFn, consumerOptions?)
 ```
 
 ```javascript
