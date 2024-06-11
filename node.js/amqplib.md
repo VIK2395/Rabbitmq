@@ -69,7 +69,7 @@ Closing a connection closes all its channels as well\
 https://www.rabbitmq.com/docs/channels
 ![Screenshot from 2024-05-26 15-29-49](https://github.com/VIK2395/Rabbitmq/assets/50545334/81ca1532-824c-4bab-ace4-0c99dd949365)
 
-__Notices__
+__Prefetch__
 
 Prefetch is set on channel
 ```javascript
@@ -82,4 +82,26 @@ https://www.rabbitmq.com/docs/consumer-prefetch
 
 We are not forbidden to crete multiple consumers per a channel. But is it a good practice?\
 https://www.rabbitmq.com/docs/consumer-prefetch#independent-consumers
+
+__Ack and nack__
+
+Ack and nack are set on channel
+```javascript
+channel.ack(message: Message, allUpTo?: boolean): void;
+channel.nack(message: Message, allUpTo?: boolean, requeue?: boolean): void;
+```
+
+__Dlx__
+
+Dlx is set in assertQueue inside options.arguments
+```javascript
+channel.assertQueue(queue: string, options?: Options.AssertQueue): Promise<Replies.AssertQueue>;
+````
+
+__Alt__
+
+Alt is set in assertExchange inside oprions.arguments
+```javascript
+channel.assertExchange(exchange: string, type: string, options?: Options.AssertExchange): Promise<Replies.AssertExchange>;
+```
 
