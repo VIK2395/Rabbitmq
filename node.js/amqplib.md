@@ -93,14 +93,14 @@ channel.nack(message: Message, allUpTo?: boolean, requeue?: boolean): void;
 
 __Dlx__
 
-Dlx is set in assertQueue inside options.arguments
+Dlx is set in assertQueue inside options.arguments. Queue-to-DlxEchange.
 ```javascript
 channel.assertQueue(queue: string, options?: Options.AssertQueue): Promise<Replies.AssertQueue>;
 ````
 
 __Alt__
 
-Alt is set in assertExchange inside oprions.arguments
+Alt is set in assertExchange inside oprions.arguments. Exchange-to-AltExchange.
 ```javascript
 channel.assertExchange(exchange: string, type: string, options?: Options.AssertExchange): Promise<Replies.AssertExchange>;
 ```
