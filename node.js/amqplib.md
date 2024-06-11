@@ -105,3 +105,4 @@ Alt is set in assertExchange inside oprions.arguments. Exchange-to-AltExchange.
 channel.assertExchange(exchange: string, type: string, options?: Options.AssertExchange): Promise<Replies.AssertExchange>;
 ```
 
+https://jstobigdata.com/rabbitmq/alternate-exchange-in-rabbitmq/
