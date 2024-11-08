@@ -47,6 +47,7 @@ consumerFn(msg) {
 
 __Publish message__
 ```javascript
+// where msg: Buffer.from(text)
 channel.publish(exchangeName, routingKey, msg, publishOptions?)
 ```
 To default exchange (always has the direct type)
