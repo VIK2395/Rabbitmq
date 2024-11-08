@@ -73,6 +73,7 @@ Messaging patterns:
 
   ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/6fd6a5e4-5a52-4d44-bb14-e89bce803002)
 
+  **Shared Queue with Multiple Consumers**: If multiple consumers are attached to a single queue (i.e., competing consumers), the message will be delivered to only one consumer at a time. If that consumer NACKs the message and it is configured for requeueing, RabbitMQ will put the message back in the queue and try to redeliver it. The message could be redelivered to the same consumer or to a different one, depending on consumer availability and the round-robin scheduling.
 
 - __Publish/Subscribe__;\
   The idea is to send the same message to multiple __different__ consumes. RabbitMQ doesn't store multiple message copies, it stores the original message and the queues store just the reference to the message.\
