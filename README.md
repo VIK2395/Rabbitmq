@@ -82,6 +82,8 @@ Messaging patterns:
   
   ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/ff73c551-5854-4f76-a8f9-daf5e30296be)
 
+  **Individual Consumer Queues**: If each consumer has its own queue and receives a copy of the message, then a NACK from one consumer won’t affect the others. Each queue operates independently, so other consumers can still process their copies of the message, and only the consumer that NACKed it will be impacted.
+
 - __Request-Reply__\
   The idea is simle, organaze a response/reply to a request.\
   Sending/publishing a request, the client needs to spesify its reply queue name which it listens to; with extra property __ReplyTo__ = QueueName;\
