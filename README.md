@@ -66,8 +66,10 @@ https://www.rabbitmq.com/tutorials/amqp-concepts#exchange-default
 
 
 Messaging patterns:
-- __Competing consumers (Work queue)__; By default, RabbitMQ sends messages in round-robin manner;\
-  The idea is to have multiple __same__ consumers and distribute messages between them so that the idle consumers receive/process the messages;\
+- __Competing consumers (Work queue)__;
+  - By default, RabbitMQ sends messages in round-robin manner; the same consumer can receive/process multiple messages at the same time regardless of how busy it is;
+  - The idea is to "disable" the default round-robin manner and have multiple __same__ consumers and distribute messages between them so that the idle consumers receive/process the messages;
+
   https://medium.com/event-driven-utopia/competing-consumers-pattern-explained-b338d54eff2b \
   7 and 8b in 2*
 
