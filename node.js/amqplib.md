@@ -87,8 +87,25 @@ __Prefetch__
 
   ```javascript
   // Prefetch by consumer
-  channel.basicQos(1);
+  // In amqplib, the call below throws is not a function error because no such method in amqplib.
+  channel.basicQos(5);
   ```
+
+In RabbitMQ, both `channel.basicQos(5)` and `channel.prefetch(5)` effectively set the **prefetch count** to 5, but the terms can sometimes cause confusion because of naming differences across client libraries. Here’s the breakdown:
+
+1. **`channel.basicQos(5)`**:
+   - This is the **AMQP protocol-level command** to set the QoS (Quality of Service) for message delivery, specifically setting the **prefetch count**.
+   - It tells RabbitMQ to deliver a maximum of 5 unacknowledged messages to each consumer on the channel before waiting for acknowledgments.
+   - This is the general approach in RabbitMQ’s **Java client** and many other clients that follow the AMQP standard closely.
+
+2. **`channel.prefetch(5)`**:
+   - This is the same concept but specific to certain client libraries, such as **`amqplib` in Node.js**, which uses `prefetch` as a more intuitive name for this setting.
+   - **`channel.prefetch(5)` is effectively a wrapper around `basicQos(5)`, setting the maximum number of unacknowledged messages the consumer can handle at a time to 5.**
+
+### Summary
+
+- **Functionally Equivalent**: `channel.basicQos(5)` and `channel.prefetch(5)` both configure the prefetch limit to 5 unacknowledged messages per consumer.
+- **Library-Specific Naming**: Some libraries expose it as `prefetch` for clarity, but they accomplish the same underlying QoS configuration.
 
 We are not forbidden to crete multiple consumers per a channel. But is it a good practice?\
 https://www.rabbitmq.com/docs/consumer-prefetch#independent-consumers
