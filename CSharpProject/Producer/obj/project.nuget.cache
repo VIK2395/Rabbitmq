@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "6OYEZHvmRkf9tesnX7MNwkFrvgMGDvnwECLPc6j772VIsCQ9BtOxduS64yq5mbKArW+eGtbGmb/wV2i3zqaNUg==",
+  "success": true,
+  "projectFilePath": "E:\\Programming\\RabbitMQ\\CSharpProject\\Producer\\Producer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VIKTOR-PC\\.nuget\\packages\\rabbitmq.client\\6.5.0\\rabbitmq.client.6.5.0.nupkg.sha512",
+    "C:\\Users\\VIKTOR-PC\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\VIKTOR-PC\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
+    "C:\\Users\\VIKTOR-PC\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\VIKTOR-PC\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\VIKTOR-PC\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\VIKTOR-PC\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}

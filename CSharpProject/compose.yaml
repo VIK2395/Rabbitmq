@@ -1,0 +1,17 @@
+volumes:
+  rabbitmq_data:
+
+services: 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: RabbitMQ
+    ports:
+      # Standard AMQP protocol port
+      - "5672:5672"
+      # HTTP management UI
+      - "15672:15672"
+    environment:
+      DEFAULT_USER: "guest"
+      DEFAULT_PASS: "guest"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmqz
