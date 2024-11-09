@@ -72,16 +72,22 @@ https://www.rabbitmq.com/docs/channels
 
 __Prefetch__
 
-Prefetch is set on channel
-```javascript
-channel.prefetch(1)
-```
 - ___Channel Prefetch___
   ![image](https://github.com/VIK2395/Rabbitmq/assets/50545334/3840b288-9774-4330-923d-96abe0ecc2ec)
-  https://amqp-node.github.io/amqplib/channel_api.html#channel_prefetch \
+  https://amqp-node.github.io/amqplib/channel_api.html#channel_prefetch
+
+  ```javascript
+  // Prefetch by channel
+  channel.prefetch(1)
+  ```
 
 - ___Consumer Prefetch___\
   https://www.rabbitmq.com/docs/consumer-prefetch
+
+  ```javascript
+  // Prefetch by consumer
+  channel.basicQos(1);
+  ```
 
 We are not forbidden to crete multiple consumers per a channel. But is it a good practice?\
 https://www.rabbitmq.com/docs/consumer-prefetch#independent-consumers
