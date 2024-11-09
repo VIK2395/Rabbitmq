@@ -46,6 +46,9 @@ namespace Producer
 
                 count++;
             }
+
+            Console.WriteLine("Press [enter] to exit.");
+            Console.ReadLine();
         }
     }
 }
