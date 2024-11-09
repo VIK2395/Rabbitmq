@@ -78,7 +78,7 @@ __Prefetch__
 
   ```javascript
   // Prefetch by channel
-  //  Each consumer on the channel is allowed to receive up to 5 unacknowledged messages at a time
+  // Each consumer on the channel is allowed to receive up to 5 unacknowledged messages at a time
   channel.prefetch(5)
   ```
 
