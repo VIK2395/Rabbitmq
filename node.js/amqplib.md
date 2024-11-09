@@ -87,7 +87,7 @@ __Prefetch__
 
   ```javascript
   // Prefetch by consumer
-  // In amqplib, the call below throws is not a function error because no such method in amqplib.
+  // In amqplib, the call below throws "channel.basicQos is not a function" error because no such method in amqplib.
   channel.basicQos(5);
   ```
 
