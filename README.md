@@ -67,8 +67,8 @@ https://www.rabbitmq.com/tutorials/amqp-concepts#exchange-default
 
 Messaging patterns:
 - __Competing consumers (Work queue)__;
-  - By default, RabbitMQ sends messages in round-robin manner; the same consumer can receive multiple messages at the same time regardless of how busy it is; [In single-threaded env, these messages are held in the consumer's internal memory buffer (effectively, a "consumer queue") and are beging processed one by one [if the consumer function is synchronous]].
-  - The idea is to "disable" the default round-robin manner and have multiple __same__ consumer instances and distribute messages between them so that the idle consumers receive/process the messages;
+  - By default, RabbitMQ sends messages in round-robin manner; the same consumer can receive multiple messages at the same time regardless of how busy it is; [In single-threaded env, these messages are held in the consumer's internal memory buffer (effectively, a "consumer queue") and are beging processed one by one [if the consumer function is synchronous]. That consumer is a single process with a single thread by default. So the code is CPU/thread blocking and no advantage of `prefetch > 1`. Tested with C#].
+  - The idea is to "disable" the default round-robin manner and have multiple __same__ consumer instances(different processes with own threads) and distribute messages between them so that the idle consumers receive/process the messages;
 
   https://medium.com/event-driven-utopia/competing-consumers-pattern-explained-b338d54eff2b \
   7 and 8b in 2*
