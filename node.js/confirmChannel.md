@@ -2,6 +2,7 @@ Wait for confirms that all published messages were successfull delevered to Rabb
 
 ```javascript
 const connection = await amqp.connect(connectionString);
+
 const channel = await connection.createChannel();
 await channel.confirmSelect();
 // or
