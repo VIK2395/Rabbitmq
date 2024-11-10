@@ -52,6 +52,14 @@ const { consumerTag } = await channel.consume('queue', (msg) => {}, { noAck: tru
 - Whether the consumer must acknowledge each message received.
   - When `false`, the consumer must explicitly acknowledge each message (typically by calling `channel.ack(message)` in the code).
   - When `true`, messages received will not require acknowledgment, so they are immediately marked as delivered and will not be re-queued if the consumer fails.
+
+## prefetch
+
+```javascript
+channel.prefetch(1);
+```
+- Default `unset`
+- How many unacknowledged messages, each consumer on the channel is allowed to receive at a time
  
 # Publisher options
 
