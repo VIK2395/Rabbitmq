@@ -49,11 +49,6 @@ const queue = await channel.assertQueue('queue', {arguments: { 'x-message-ttl': 
 - Default `unset`; meaning messages will remain in the queue indefinitely.
 - How long in ms, messages remain in the queue.
 
- await channel.assertQueue(queue, {
-        durable: true,
-        arguments: { 'x-message-ttl': 5000 }  // Message TTL in milliseconds
-    });
-
 # Consumer options
 
 ## noAck
@@ -84,3 +79,11 @@ channel.publish(exchangeName, routingKey, Buffer.from(msg), { persistent: true }
 - Default `false`
 - Whether the message will persist across RabbitMQ broker restarts.
 - Persistent messages will not be saved unless the queue itself is durable.
+
+## expiration
+
+```javascript
+channel.publish(exchangeName, routingKey, Buffer.from(msg), { expiration: '5000' });
+```
+- Default `unset`; meaning messages will remain in the queue indefinitely.
+- Overrides `QueueOptions.arguments['x-message-ttl']`
