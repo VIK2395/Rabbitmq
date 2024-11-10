@@ -1,6 +1,6 @@
 # Exchange options
 
-## durable
+### durable
 
 ```javascript
 const { exchange } = await channel.assertExchange(exchangeName, exchangeType, { durable: true })
@@ -10,7 +10,7 @@ const { exchange } = await channel.assertExchange(exchangeName, exchangeType, { 
 
 # Queue options
 
-## exclusive
+### exclusive
 
 ```javascript
 const queue = await channel.assertQueue('', { exclusive: true });
@@ -22,7 +22,7 @@ const queue = await channel.assertQueue('', { exclusive: true });
   - **Common use case:** This is often used for temporary, per-client queues, such as those created for direct response to specific clients in RPC-style messaging.
 - The queue name is set to an empty string ('') to let RabbitMQ generate a unique name.
 
-## durable
+### durable
 
 ```javascript
 channel.assertQueue(queue, { durable: true });
@@ -32,7 +32,7 @@ channel.assertQueue(queue, { durable: true });
   - This does not mean that messages in the queue are also persisted. Messages must be marked as persistent separately.
   - `false` is suitable for short-lived or temporary queues that don’t need to persist beyond the current broker session.
  
-## autoDelete
+### autoDelete
 
 ```javascript
 const queue = await channel.assertQueue('queue', { autoDelete: true });
@@ -41,7 +41,7 @@ const queue = await channel.assertQueue('queue', { autoDelete: true });
 - Whether the queue will automatically be deleted when the last consumer unsubscribes.
 - `durable: true` and `autoDelete: true` make the queue persistent across broker restarts but still deleted after the last consumer disconnects.
 
-## arguments['x-message-ttl']
+### arguments['x-message-ttl']
 
 ```javascript
 const queue = await channel.assertQueue('queue', {arguments: { 'x-message-ttl': 5000 } });
@@ -51,7 +51,7 @@ const queue = await channel.assertQueue('queue', {arguments: { 'x-message-ttl': 
 
 # Consumer options
 
-## noAck
+### noAck
 
 ```javascript
 const { consumerTag } = await channel.consume('queue', (msg) => {}, { noAck: true });
@@ -61,7 +61,7 @@ const { consumerTag } = await channel.consume('queue', (msg) => {}, { noAck: tru
   - When `false`, the consumer must explicitly acknowledge each message (typically by calling `channel.ack(message)` in the code).
   - When `true`, messages received will not require acknowledgment, so they are immediately marked as delivered and will not be re-queued if the consumer fails.
 
-## prefetch
+### prefetch
 
 ```javascript
 channel.prefetch(1);
@@ -71,7 +71,7 @@ channel.prefetch(1);
  
 # Publisher options
 
-## persistent
+### persistent
 
 ```javascript
 channel.publish(exchangeName, routingKey, Buffer.from(msg), { persistent: true });
@@ -80,7 +80,7 @@ channel.publish(exchangeName, routingKey, Buffer.from(msg), { persistent: true }
 - Whether the message will persist across RabbitMQ broker restarts.
 - Persistent messages will not be saved unless the queue itself is durable.
 
-## expiration
+### expiration
 
 ```javascript
 channel.publish(exchangeName, routingKey, Buffer.from(msg), { expiration: '5000' });
