@@ -1,4 +1,4 @@
-Wait for confirms that all published messages were successfull delevered to RabbitMQ server.
+Wait for confirms that all published messages were successfully delevered to RabbitMQ server.
 
 ```javascript
 const connection = await amqp.connect(connectionString);
