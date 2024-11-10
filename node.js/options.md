@@ -41,6 +41,19 @@ const queue = await channel.assertQueue('queue', { autoDelete: true });
 - Whether the queue will automatically be deleted when the last consumer unsubscribes.
 - `durable: true` and `autoDelete: true` make the queue persistent across broker restarts but still deleted after the last consumer disconnects.
 
+## arguments['x-message-ttl']
+
+```javascript
+const queue = await channel.assertQueue('queue', {arguments: { 'x-message-ttl': 5000 } });
+```
+- Default `unset`; meaning messages will remain in the queue indefinitely.
+- How long in ms, messages remain in the queue.
+
+ await channel.assertQueue(queue, {
+        durable: true,
+        arguments: { 'x-message-ttl': 5000 }  // Message TTL in milliseconds
+    });
+
 # Consumer options
 
 ## noAck
@@ -58,7 +71,7 @@ const { consumerTag } = await channel.consume('queue', (msg) => {}, { noAck: tru
 ```javascript
 channel.prefetch(1);
 ```
-- Default `unset`
+- Default `unset`; meaning RabbitMQ to send as many messages as it can to a consumer until memory or network limitations are reached.
 - How many unacknowledged messages, each consumer on the channel is allowed to receive at a time
  
 # Publisher options
