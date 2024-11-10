@@ -3,6 +3,7 @@
 ```javascript
 const queue = await channel.assertQueue('', { exclusive: true });
 ```
+- Default `false`
 - The queue is restricted to only one connection.
   - **Connection-specific:** Only the connection that created the queue can access it. Other connections won’t be able to consume messages from this queue.
   - **Automatic deletion:** When the connection that created the queue closes, the queue will be automatically deleted.
