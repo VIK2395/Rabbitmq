@@ -212,7 +212,9 @@ consume().catch(console.error);
 2. You need to track the history of dead-lettering events across multiple queues.
 3. You prefer RabbitMQ-managed metadata without additional application logic.
 
-#### **Use `x-retry-count` When**:
-1. You need application-controlled retry logic.
-2. You want to implement features like **retry limits**, **exponential backoff**, or **custom re-queueing**.
-3. You don’t rely heavily on RabbitMQ’s built-in dead-lettering.
+# Acknowledgment still required
+
+in RabbitMQ, when you pass a message to another queue (e.g., re-publishing to a retry queue or a dead-letter queue), the message in the current queue must be explicitly acknowledged (ack) by the consumer.
+
+- When you decide to send the message to another queue (e.g., retry queue or dead-letter queue), you are creating a **new message** in RabbitMQ. Copy content and heades to the new message.
+- After re-publishing, the **original message** in the current queue still exists **until you acknowledge it**.
