@@ -6,11 +6,16 @@
   ```
 - Declare **durable** queues
   ```javascript
-  await channel.assertQueue(QUEUE,  { durable: true });
+  await channel.assertQueue(QUEUE_NAME,  { durable: true });
   ```
 - Push **persistent** messages
   ```javascript
-  messages.forEach(msg => channel.publish(EXCHANGE, QUEUE, Buffer.from(JSON.stringify(msg)), { persistent: true }));
+  messages.forEach(msg => channel.publish(
+    EXCHANGE_NAME,
+    QUEUE_NAME,
+    Buffer.from(JSON.stringify(msg)),
+    { persistent: true }
+  ));
   ```
 
 Create RabbitMQ container with named **volume** and set **hostname**
