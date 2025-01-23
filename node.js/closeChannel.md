@@ -9,7 +9,7 @@ When you call `await channel.close()` in RabbitMQ while there are messages curre
    - If the consumer is in the middle of processing messages and has not yet acknowledged them (`ack`), the unacknowledged messages will be requeued back to the queue.
    - These unacknowledged messages will be eligible for redelivery to another active consumer, or to the same consumer if it reconnects later (depending on the queue's configuration, such as `auto-delete` or `exclusive`).
 
-# When a message gets to consumer is messages count in queue descreases immediatly or only after ack/nack?
+# When a message gets to consumer, is messages count in queue descreases immediatly or only after ack/nack?
 
 In RabbitMQ, the message count in the queue **decreases immediately** when a message is delivered to a consumer, not when it is acknowledged (`ack`) or negatively acknowledged (`nack`). Here's the detailed behavior:
 
