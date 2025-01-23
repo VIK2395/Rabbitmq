@@ -5,6 +5,9 @@ services:
   rabbitmq:
     image: rabbitmq:3-management
     container_name: RabbitMQ
+    # hostname is important for RabbitMQ volumes persistence
+    # https://github.com/docker-library/rabbitmq/issues/392
+    hostname: rabbitmq
     ports:
       # Standard AMQP protocol port
       - "5672:5672"
@@ -14,4 +17,4 @@ services:
       DEFAULT_USER: "guest"
       DEFAULT_PASS: "guest"
     volumes:
-      - rabbitmq_data:/var/lib/rabbitmqz
+      - rabbitmq_data:/var/lib/rabbitmq
