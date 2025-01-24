@@ -101,6 +101,7 @@ In RabbitMQ, both `channel.basicQos(5)` and `channel.prefetch(5)` effectively se
 2. **`channel.prefetch(5)`**:
    - This is the same concept but specific to certain client libraries, such as **`amqplib` in Node.js**, which uses `prefetch` as a more intuitive name for this setting.
    - **`channel.prefetch(5)` is effectively a wrapper around `basicQos(5)`, setting the maximum number of unacknowledged messages the consumer can handle at a time to 5.**
+     - **If there are 2 consumers within a channel, then there will be 10 unacked messages at a time.**
 
 ### Summary
 
