@@ -1,5 +1,6 @@
 volumes:
   rabbitmq_data:
+    name: rabbitmq_data
 
 services: 
   rabbitmq:
